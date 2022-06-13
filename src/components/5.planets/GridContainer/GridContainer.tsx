@@ -10,7 +10,7 @@ export function GridContainer({
   className = ``,
   hasMaxWidth = true,
 }: Props) {
-  const maxWidth = hasMaxWidth ? `max-w-[1280px]` : ``
+  const maxWidth = hasMaxWidth ? `max-w-[1280px]` : `-mx-16`
 
   return (
     <div

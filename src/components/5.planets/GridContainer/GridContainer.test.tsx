@@ -38,11 +38,13 @@ describe(`GridContainer`, () => {
   it(`has a no max width when the hasMaxWidth prop is set to false`, () => {
     render(
       <GridContainer {...gridContainerMockProps} hasMaxWidth={false}>
-        Default max width is 1280px
+        No max width
       </GridContainer>
     )
+
     expect(screen.getByTestId(`grid-container`)).not.toHaveClass(
       `max-w-[1280px]`
     )
+    expect(screen.getByTestId(`grid-container`)).toHaveClass(`-mx-16`)
   })
 })

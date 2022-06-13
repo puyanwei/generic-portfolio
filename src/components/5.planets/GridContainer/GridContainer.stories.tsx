@@ -20,7 +20,7 @@ export const GridContainer: ComponentStory<typeof Component> = () => (
       </div>
     </Component>
     <h2 className="text-2xl">No max width container</h2>
-    <Component {...gridContainerMockProps}>
+    <Component {...gridContainerMockProps} hasMaxWidth={false}>
       <div className="text-2xl text-white bg-gray-500">
         <p className="grid items-center justify-center w-full h-[300px]">
           No max width set
