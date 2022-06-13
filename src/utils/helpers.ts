@@ -1,4 +1,4 @@
-export function returnAndWarn(errorMessage: string) {
+export function nullifyAndWarn(errorMessage: string) {
   console.warn(errorMessage)
   return null
 }
