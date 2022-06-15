@@ -13,6 +13,7 @@
     "sourceType": "module"
   },
   "rules": {
+    "semi": ["error", "never"],
     "import/no-unresolved": 0, // we should re-enable this once we've determined how to ignore module aliases (e.g @/stores/, @/utils/ etc)
     "no-use-before-define": 0,
     "react/jsx-props-no-spreading": 0,
@@ -42,7 +43,13 @@
     ],
     "no-nested-ternary": 0,
     "quotes": ["error", "backtick"],
-    "prettier/prettier": "false" //TODO: Fix me! Why does this override eslint?
+    "prettier/prettier": [
+      "error",
+      { "endOfLine": "auto", "semi": false },
+      {
+        "usePrettierrc": false
+      }
+    ]
   },
   "ignorePatterns": ["/next/.next", "/next/out"]
 }

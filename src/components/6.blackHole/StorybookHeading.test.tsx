@@ -33,7 +33,7 @@ describe(`StorybookHeading`, () => {
       </StorybookHeading>
     )
     expect(screen.getByTestId(`storybook-heading`)).toHaveClass(`text-2xl`)
-    expect(container.querySelector("h2")).toBeInTheDocument()
+    expect(container.querySelector(`h2`)).toBeInTheDocument()
   })
   it(`is a xl if size prop is set to small`, () => {
     const { container } = render(
@@ -43,6 +43,6 @@ describe(`StorybookHeading`, () => {
     )
 
     expect(screen.getByTestId(`storybook-heading`)).toHaveClass(`text-xl`)
-    expect(container.querySelector("h3")).toBeInTheDocument()
+    expect(container.querySelector(`h3`)).toBeInTheDocument()
   })
 })

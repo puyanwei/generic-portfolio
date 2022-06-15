@@ -10,11 +10,9 @@ export function StorybookHeading({
   children,
   size: providedSize = `medium`,
 }: Props) {
-  const size = providedSize === "medium" ? `text-2xl` : `text-xl`
-
   return (
     <>
-      {providedSize === "medium" ? (
+      {providedSize === `medium` ? (
         <h2 className={`text-2xl ${className}`} data-testid={testId}>
           {children}
         </h2>
