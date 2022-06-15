@@ -1,7 +1,7 @@
 import React from "react"
 import { ComponentStory, ComponentMeta } from "@storybook/react"
 import { GridContainer as Component } from "./GridContainer"
-import { Decorator } from "../../6.blackHole/Decorator"
+import { StorybookContainer } from "../../6.blackHole/StorybookContainer"
 
 export default {
   title: `Planet/Grid Container`,
@@ -9,7 +9,7 @@ export default {
 } as ComponentMeta<typeof Component>
 
 export const GridContainer: ComponentStory<typeof Component> = () => (
-  <Decorator>
+  <StorybookContainer>
     <h2 className="text-2xl">Default container</h2>
     <Component>
       <div className="text-2xl text-white bg-gray-500">
@@ -91,5 +91,5 @@ export const GridContainer: ComponentStory<typeof Component> = () => (
       <div className="text-2xl text-white bg-gray-500 h-[100px]" />
       <div className="text-2xl text-white bg-gray-500 h-[100px]" />
     </Component>
-  </Decorator>
+  </StorybookContainer>
 )

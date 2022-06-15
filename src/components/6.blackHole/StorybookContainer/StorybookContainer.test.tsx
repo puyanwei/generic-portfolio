@@ -1,28 +1,26 @@
 import { render, screen } from "@testing-library/react"
-import { Decorator } from "./Decorator"
-import { decoratorMockProps } from "./Decorator.mockProps"
+import { StorybookContainer } from "./StorybookContainer"
+import { decoratorMockProps } from "./StorybookContainer.mockProps"
 
-describe(`Decorator`, () => {
+describe(`StorybookContainer`, () => {
   it(`renders the root`, () => {
-    render(<Decorator {...decoratorMockProps} />)
+    render(<StorybookContainer {...decoratorMockProps} />)
     expect(screen.getByTestId(`decorator`)).toBeVisible()
   })
   it(`renders the component text correctly`, () => {
     render(
-      <Decorator {...decoratorMockProps}>
+      <StorybookContainer {...decoratorMockProps}>
         This is a decorator for Storybook components
-      </Decorator>
+      </StorybookContainer>
     )
     expect(
       screen.getByText(`This is a decorator for Storybook components`)
     ).toBeVisible()
   })
   it(`className default prop should be blank string`, () => {
-    render(<Decorator {...decoratorMockProps} />)
+    render(<StorybookContainer {...decoratorMockProps} />)
     expect(screen.getByTestId(`decorator`)).not.toHaveClass(`undefined`)
   })
   it.todo(`Provides a layout for a single storybook component`)
   it.todo(`Provides a layout for multiple storybook components`)
-  it.todo(`Applies an optional title to one component`)
-  it.todo(`Applies an optional title to the different variants of components`)
 })

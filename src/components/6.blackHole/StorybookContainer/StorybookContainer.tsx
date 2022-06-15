@@ -4,7 +4,7 @@ export interface Props extends Component {
   title?: string
 }
 
-export function Decorator({
+export function StorybookContainer({
   testId = `decorator`,
   children,
   className = ``,
