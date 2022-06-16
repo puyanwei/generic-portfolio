@@ -12,6 +12,7 @@ describe(`StorybookHeading`, () => {
     expect(screen.getByTestId(`storybook-heading`)).toBeVisible()
     expect(screen.getByText(`Hello world`)).toBeVisible()
   })
+
   it(`renders the component text correctly`, () => {
     render(
       <StorybookHeading {...storybookHeadingMockProps}>
@@ -22,11 +23,13 @@ describe(`StorybookHeading`, () => {
       screen.getByText(`This is a heading for Storybook components`)
     ).toBeVisible()
   })
+
   it(`className default prop should be blank string`, () => {
     render(<StorybookHeading {...storybookHeadingMockProps} />)
     expect(screen.getByTestId(`storybook-heading`)).not.toHaveClass(`undefined`)
   })
-  it(`is a 2xl size by default`, () => {
+
+  it(`is a 2xl size and h2 by default`, () => {
     const { container } = render(
       <StorybookHeading {...storybookHeadingMockProps}>
         Hello world
@@ -35,13 +38,13 @@ describe(`StorybookHeading`, () => {
     expect(screen.getByTestId(`storybook-heading`)).toHaveClass(`text-2xl`)
     expect(container.querySelector(`h2`)).toBeInTheDocument()
   })
-  it(`is a xl if size prop is set to small`, () => {
+
+  it(`is xl size and h3 if size prop is set to small`, () => {
     const { container } = render(
       <StorybookHeading {...storybookHeadingMockProps} size="small">
         Hello world
       </StorybookHeading>
     )
-
     expect(screen.getByTestId(`storybook-heading`)).toHaveClass(`text-xl`)
     expect(container.querySelector(`h3`)).toBeInTheDocument()
   })
