@@ -1,7 +1,8 @@
 import React from "react"
 import { ComponentStory, ComponentMeta } from "@storybook/react"
 import { GridContainer as Component } from "./GridContainer"
-import { StorybookContainer } from "../../6.blackHole/StorybookContainer"
+import { StorybookContainer } from "@/components/6.blackHole/StorybookContainer"
+import { StorybookHeading } from "@/components/6.blackHole/StorybookHeading"
 
 export default {
   title: `Planet/Grid Container`,
@@ -10,7 +11,7 @@ export default {
 
 export const GridContainer: ComponentStory<typeof Component> = () => (
   <StorybookContainer>
-    <h2 className="text-2xl">Default container</h2>
+    <StorybookHeading>Default container</StorybookHeading>
     <Component>
       <div className="text-2xl text-white bg-gray-500">
         <p className="grid items-center justify-center w-full h-[300px]">
@@ -18,7 +19,7 @@ export const GridContainer: ComponentStory<typeof Component> = () => (
         </p>
       </div>
     </Component>
-    <h2 className="text-2xl">No max width container</h2>
+    <StorybookHeading>No max width container</StorybookHeading>
     <Component hasMaxWidth={false}>
       <div className="text-2xl text-white bg-gray-500">
         <p className="grid items-center justify-center w-full h-[300px]">
@@ -26,21 +27,21 @@ export const GridContainer: ComponentStory<typeof Component> = () => (
         </p>
       </div>
     </Component>
-    <h2 className="text-2xl">2 columns</h2>
+    <StorybookHeading>2 columns</StorybookHeading>
     <Component columns={2}>
       <div className="text-2xl text-white bg-gray-500 h-[100px]" />
       <div className="text-2xl text-white bg-gray-500 h-[100px]" />
       <div className="text-2xl text-white bg-gray-500 h-[100px]" />
       <div className="text-2xl text-white bg-gray-500 h-[100px]" />
     </Component>
-    <h2 className="text-2xl">4 columns</h2>
+    <StorybookHeading>4 columns</StorybookHeading>
     <Component columns={4}>
       <div className="text-2xl text-white bg-gray-500 h-[100px]" />
       <div className="text-2xl text-white bg-gray-500 h-[100px]" />
       <div className="text-2xl text-white bg-gray-500 h-[100px]" />
       <div className="text-2xl text-white bg-gray-500 h-[100px]" />
     </Component>
-    <h2 className="text-2xl">6 columns</h2>
+    <StorybookHeading>6 columns</StorybookHeading>
     <Component columns={6}>
       <div className="text-2xl text-white bg-gray-500 h-[100px]" />
       <div className="text-2xl text-white bg-gray-500 h-[100px]" />
@@ -51,7 +52,7 @@ export const GridContainer: ComponentStory<typeof Component> = () => (
       <div className="text-2xl text-white bg-gray-500 h-[100px]" />
       <div className="text-2xl text-white bg-gray-500 h-[100px]" />
     </Component>
-    <h2 className="text-2xl">12 columns</h2>
+    <StorybookHeading>12 columns</StorybookHeading>
     <Component columns={12}>
       <div className="text-2xl text-white bg-gray-500 h-[100px]" />
       <div className="text-2xl text-white bg-gray-500 h-[100px]" />
@@ -70,21 +71,21 @@ export const GridContainer: ComponentStory<typeof Component> = () => (
       <div className="text-2xl text-white bg-gray-500 h-[100px]" />
       <div className="text-2xl text-white bg-gray-500 h-[100px]" />
     </Component>
-    <h2 className="text-2xl">Small gap</h2>
+    <StorybookHeading>Small gap</StorybookHeading>
     <Component columns={4} gap="small">
       <div className="text-2xl text-white bg-gray-500 h-[100px]" />
       <div className="text-2xl text-white bg-gray-500 h-[100px]" />
       <div className="text-2xl text-white bg-gray-500 h-[100px]" />
       <div className="text-2xl text-white bg-gray-500 h-[100px]" />
     </Component>
-    <h2 className="text-2xl">Medium default gap</h2>
+    <StorybookHeading>Medium default gap</StorybookHeading>
     <Component columns={4} gap="medium">
       <div className="text-2xl text-white bg-gray-500 h-[100px]" />
       <div className="text-2xl text-white bg-gray-500 h-[100px]" />
       <div className="text-2xl text-white bg-gray-500 h-[100px]" />
       <div className="text-2xl text-white bg-gray-500 h-[100px]" />
     </Component>
-    <h2 className="text-2xl">Large gap</h2>
+    <StorybookHeading>Large gap</StorybookHeading>
     <Component columns={4} gap="large">
       <div className="text-2xl text-white bg-gray-500 h-[100px]" />
       <div className="text-2xl text-white bg-gray-500 h-[100px]" />

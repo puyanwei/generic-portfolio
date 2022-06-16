@@ -1,7 +1,18 @@
 import { Component } from "@/types"
 
 export interface Props extends Component {
-  size: `medium` | `small`
+  size?: `medium` | `small`
+}
+
+const variants = {
+  size: {
+    small: `text-xl`,
+    medium: `text-2xl`,
+  },
+  tag: {
+    small: `h3`,
+    medium: `h2`,
+  },
 }
 
 export function StorybookHeading({
@@ -10,17 +21,12 @@ export function StorybookHeading({
   children,
   size: providedSize = `medium`,
 }: Props) {
+  const Tag = variants.tag[providedSize] as keyof JSX.IntrinsicElements
+  const size = variants.size[providedSize]
+
   return (
-    <>
-      {providedSize === `medium` ? (
-        <h2 className={`text-2xl ${className}`} data-testid={testId}>
-          {children}
-        </h2>
-      ) : (
-        <h3 className={`text-xl ${className}`} data-testid={testId}>
-          {children}
-        </h3>
-      )}
-    </>
+    <Tag className={`${size} ${className}`} data-testid={testId}>
+      {children}
+    </Tag>
   )
 }
