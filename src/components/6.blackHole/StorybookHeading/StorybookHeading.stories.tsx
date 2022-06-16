@@ -2,7 +2,7 @@ import React from "react"
 import { ComponentStory, ComponentMeta } from "@storybook/react"
 import { StorybookHeading as Component } from "./StorybookHeading"
 import { storybookHeadingMockProps } from "./StorybookHeading.mockProps"
-import { StorybookContainer } from "./StorybookContainer"
+import { StorybookContainer } from "../StorybookContainer"
 
 export default {
   title: `Blackhole/Storybook Heading`,
