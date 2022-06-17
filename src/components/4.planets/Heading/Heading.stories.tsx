@@ -2,7 +2,7 @@ import React from "react"
 import { ComponentStory, ComponentMeta } from "@storybook/react"
 import { Heading as Component } from "./Heading"
 import { headingMockProps } from "./Heading.mockProps"
-import { StorybookContainer } from "@/components/6.blackHole/StorybookContainer"
+import { StorybookContainer } from "@/components/5.blackHole/StorybookContainer"
 
 export default {
   title: `Planet/Heading`,

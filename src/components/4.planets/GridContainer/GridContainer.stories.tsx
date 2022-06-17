@@ -1,8 +1,8 @@
 import React from "react"
 import { ComponentStory, ComponentMeta } from "@storybook/react"
 import { GridContainer as Component } from "./GridContainer"
-import { StorybookContainer } from "@/components/6.blackHole/StorybookContainer"
-import { StorybookHeading } from "@/components/6.blackHole/StorybookHeading"
+import { StorybookContainer } from "@/components/5.blackHole/StorybookContainer"
+import { StorybookHeading } from "@/components/5.blackHole/StorybookHeading"
 
 export default {
   title: `Planet/Grid Container`,
