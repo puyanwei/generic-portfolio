@@ -10,6 +10,11 @@ describe(`Icons`, () => {
 
   it(`className default prop should be blank string`, () => {
     render(<IconWrapper icon={<BsArrowRight />} testId="BsArrowRight" />)
-    expect(screen.getByTestId(`icons`)).not.toHaveClass(`undefined`)
+    expect(screen.getByTestId(`BsArrowRight`)).not.toHaveClass(`undefined`)
+  })
+
+  it(`centers the icon inside the span container`, () => {
+    render(<IconWrapper icon={<BsArrowRight />} testId="BsArrowRight" />)
+    expect(screen.getByTestId(`BsArrowRight`)).toHaveClass(`flex items-center`)
   })
 })

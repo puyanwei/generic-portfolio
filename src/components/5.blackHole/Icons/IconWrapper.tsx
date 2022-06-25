@@ -6,7 +6,10 @@ export interface Props extends Component {
 
 export function IconWrapper({ testId = `icon`, className = ``, icon }: Props) {
   return (
-    <span className={className} data-testId={testId}>
+    <span
+      className={`flex items-center pl-1 ${className}`}
+      data-testid={testId}
+    >
       {icon}
     </span>
   )

@@ -1,10 +1,12 @@
+import { IconWrapper } from "../../5.blackHole/Icons"
 import { Component } from "@/types"
+import { BsArrowRight } from "react-icons/bs"
 
 export interface Props extends Component {
   url: string
   isNewTab?: boolean
   isNoFollow?: boolean
-  isReferrer?: boolean
+  isNoReferrer?: boolean
 }
 
 export function Link({
@@ -14,24 +16,22 @@ export function Link({
   url,
   isNewTab = false,
   isNoFollow = false,
-  isReferrer = false,
+  isNoReferrer = false,
 }: Props) {
-  // eslint-disable-next-line quotes
-  const follow = `${isNoFollow ? "nofollow " : ""} ${
-    // eslint-disable-next-line quotes
-    isReferrer ? "" : "noreferrer"
-  }}`
+  const follow = isNoFollow ? `nofollow` : ``
+  const referrer = isNoReferrer ? `noreferrer` : ``
+  const rel = `${follow.trim()} ${referrer.trim()}`
 
   const target = isNewTab ? `_blank` : `_self`
   return (
     <a
-      className={`text-gray-400 ${className}`}
+      className={`text-gray-400 hover:text-gray-500 flex ${className}`}
       data-testid={testId}
       href={url}
       target={target}
-      rel={follow}
+      rel={rel}
     >
-      {children}
+      {children} <IconWrapper icon={<BsArrowRight />} testId="BsArrowRight" />
     </a>
   )
 }
