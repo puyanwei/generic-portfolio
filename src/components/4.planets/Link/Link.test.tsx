@@ -1,4 +1,6 @@
+import { IconWrapper } from "@/components/5.blackHole/Icons/IconWrapper"
 import { render, screen } from "@testing-library/react"
+import { BsArrowRight } from "react-icons/bs"
 import { Link } from "./Link"
 import { linkMockProps } from "./Link.mockProps"
 
@@ -32,8 +34,13 @@ describe(`Link`, () => {
     expect(screen.getByTestId(`BsArrowRight`)).toBeInTheDocument()
   })
 
+  it(`adds an icon after the text if one is provided`, () => {
+    const icon = <IconWrapper icon={<BsArrowRight />} testId="BsArrowRight" />
+    render(<Link {...linkMockProps} icon={icon} />)
+  })
+
   it(`accepts a href`, () => {
-    render(<Link {...linkMockProps} url="/projects" />)
+    render(<Link {...linkMockProps} href="/projects" />)
     expect(screen.getByTestId(`link`)).toHaveAttribute(`href`, `/projects`)
   })
 
