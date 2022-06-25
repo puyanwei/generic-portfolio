@@ -4,7 +4,7 @@ import { Homepage as Component } from "./Homepage"
 import { homepageMockProps } from "./Homepage.mockProps"
 
 export default {
-  title: `God/Homepage`,
+  title: `Universe/Homepage`,
   component: Component,
 } as ComponentMeta<typeof Component>
 
