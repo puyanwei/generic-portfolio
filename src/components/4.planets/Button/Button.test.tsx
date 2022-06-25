@@ -1,4 +1,5 @@
-import { render, screen } from "@testing-library/react"
+import { render, screen, fireEvent } from "@testing-library/react"
+import userEvent from "@testing-library/user-event"
 import { Button } from "./Button"
 import { buttonMockProps } from "./Button.mockProps"
 
@@ -28,8 +29,27 @@ describe(`Button`, () => {
     render(<Button {...buttonMockProps} />)
     expect(screen.getByTestId(`button`)).toHaveClass(`hover:border-gray-400`)
   })
-  // it(`triggers the onClick function when clicked`)
-  // it(`triggers the onSubmit function when clicked if type submit`)
-  // it(`tabbing onto the button targets it`)
-  // it(`pressing enter or space clicks it when focusing the button`)
+  it(`triggers the onClick function when clicked`, () => {
+    const onClick = jest.fn()
+    render(<Button {...buttonMockProps} onClick={onClick} />)
+    fireEvent.click(screen.getByTestId(`button`))
+    expect(onClick).toHaveBeenCalledTimes(1)
+  })
+  it(`triggers the onSubmit function when clicked if type submit`, () => {
+    const onSubmit = jest.fn()
+    render(
+      <form onSubmit={onSubmit}>
+        <Button {...buttonMockProps} type="submit" />
+      </form>
+    )
+    fireEvent.click(screen.getByTestId(`button`))
+    expect(onSubmit).toHaveBeenCalledTimes(1)
+  })
+  it(`pressing enter or space clicks it when focusing the button`, async () => {
+    const onClick = jest.fn()
+    render(<Button {...buttonMockProps} onClick={onClick} />)
+    screen.getByTestId(`button`).focus()
+    await userEvent.keyboard(`[Enter]`)
+    expect(onClick).toHaveBeenCalledTimes(1)
+  })
 })
