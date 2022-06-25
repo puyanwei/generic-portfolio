@@ -1,28 +1,25 @@
+import { IconWrapper } from "@/components/5.blackHole/Icons"
 import { FaLaptop } from "react-icons/fa"
 import { Props } from "./Header"
 
-const icon = <FaLaptop />
+const icon = <IconWrapper testId="FaLaptop" icon={<FaLaptop size={48} />} />
 
 export const headerMockProps: Props = {
   icon: icon,
   navLinks: [
     {
-      id: `projects`,
       href: `/projects`,
       label: `Projects`,
     },
     {
-      id: `about`,
       href: `/about`,
       label: `About`,
     },
     {
-      id: `posts`,
       href: `/posts`,
       label: `Posts`,
     },
     {
-      id: `contact`,
       href: `/contact`,
       label: `Contact`,
     },

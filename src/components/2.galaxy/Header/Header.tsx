@@ -1,5 +1,5 @@
-import { slide as Menu } from "react-burger-menu"
-import Link from "next/link"
+// import Link from "next/link"
+import { Link } from "@/components/4.planets/Link"
 import { Component } from "@/types"
 
 export interface Props extends Component {
@@ -8,7 +8,6 @@ export interface Props extends Component {
 }
 
 interface NavLinks {
-  id: string
   href: string
   label: string
 }
@@ -20,15 +19,16 @@ export function Header({
   navLinks,
 }: Props) {
   return (
-    <nav data-testid={testId} className={className}>
-      {icon}
-      <Menu>
-        {navLinks.map(link => (
-          <Link key="link.label" id="home" className="menu-item" href="/">
-            {link.label}
+    <nav data-testid={testId} className={`flex justify-between ${className}`}>
+      <span className="flex">{icon}</span>
+      <span className="flex">
+        {navLinks.map(({ label, href }) => (
+          // eslint-disable-next-line @next/next/no-html-link-for-pages
+          <Link key={label} className="flex mx-6" href={href}>
+            {label}
           </Link>
         ))}
-      </Menu>
+      </span>
     </nav>
   )
 }
