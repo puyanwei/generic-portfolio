@@ -26,12 +26,11 @@ describe(`Link`, () => {
     expect(container.querySelector(`a`)).toBeInTheDocument()
   })
 
-  it(`renders the default style and has arrow icon after it`, () => {
+  it(`renders the default style `, () => {
     render(<Link {...linkMockProps} />)
     expect(screen.getByTestId(`link`)).toHaveClass(
       `text-gray-400 hover:text-gray-500`
     )
-    expect(screen.getByTestId(`BsArrowRight`)).toBeInTheDocument()
   })
 
   it(`adds an icon after the text if one is provided`, () => {
