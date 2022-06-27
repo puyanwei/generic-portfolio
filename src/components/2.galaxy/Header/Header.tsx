@@ -1,4 +1,3 @@
-// import Link from "next/link"
 import { Link } from "@/components/4.planets/Link"
 import { Component } from "@/types"
 
@@ -21,10 +20,9 @@ export function Header({
   return (
     <nav data-testid={testId} className={`flex justify-between ${className}`}>
       <span className="flex">{icon}</span>
-      <span className="flex">
+      <span className="flex gap-4">
         {navLinks.map(({ label, href }) => (
-          // eslint-disable-next-line @next/next/no-html-link-for-pages
-          <Link key={label} className="flex mx-6" href={href}>
+          <Link key={label} href={href}>
             {label}
           </Link>
         ))}

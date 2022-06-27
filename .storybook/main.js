@@ -6,7 +6,6 @@ module.exports = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
-    "storybook-addon-next",
     {
       name: "@storybook/addon-postcss",
       options: {
@@ -43,6 +42,14 @@ module.exports = {
         extensions: config.resolve.extensions,
       }),
     ]
+
+    config.resolve.alias["next/router"] = require.resolve(
+      "../__mocks__/next-router.ts"
+    )
+    config.resolve.alias["next/image"] = require.resolve(
+      "../__mocks__/next-image.tsx"
+    )
+
     return config
   },
 }

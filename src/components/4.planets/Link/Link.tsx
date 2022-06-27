@@ -1,3 +1,4 @@
+import NextLink from "next/link"
 import { IconWrapper } from "../../5.blackHole/Icons"
 import { Component } from "@/types"
 import { BsArrowRight } from "react-icons/bs"
@@ -27,14 +28,15 @@ export function Link({
   const target = isNewTab ? `_blank` : `_self`
   const icon = !!providedIcon ? providedIcon : null
   return (
-    <a
-      className={`text-gray-400 hover:text-gray-500 flex ${className}`}
-      data-testid={testId}
-      href={href}
-      target={target}
-      rel={rel}
-    >
-      {children} {icon}
-    </a>
+    <NextLink href={href}>
+      <a
+        className={`text-gray-400 hover:text-gray-500 flex ${className}`}
+        data-testid={testId}
+        target={target}
+        rel={rel}
+      >
+        {children} {icon}
+      </a>
+    </NextLink>
   )
 }
