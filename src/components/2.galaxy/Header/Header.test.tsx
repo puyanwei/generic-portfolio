@@ -12,7 +12,7 @@ describe(`Header`, () => {
     render(<Header {...headerMockProps} />)
     expect(screen.getByTestId(`header`)).not.toHaveClass(`undefined`)
   })
-  it.todo(`has the menu items on the right and icon on the left`)
+
   it.todo(`renders the default styles`)
   it.todo(`applies the anchor links correctly`)
   it.todo(`on medium breakpoint it displays the burger menu`)
