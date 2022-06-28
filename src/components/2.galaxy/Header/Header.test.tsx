@@ -13,7 +13,20 @@ describe(`Header`, () => {
     expect(screen.getByTestId(`header`)).not.toHaveClass(`undefined`)
   })
 
-  it.todo(`renders the default styles`)
-  it.todo(`applies the anchor links correctly`)
+  it(`Uses the nav tag`, () => {
+    const { container } = render(<Header {...headerMockProps} />)
+    expect(container.querySelector(`nav`)).toBeVisible()
+  })
+
+  it(`renders the default styles`, () => {
+    render(<Header {...headerMockProps} />)
+    expect(screen.getByTestId(`header`)).toHaveClass(`flex justify-between`)
+  })
+
+  it(`renders the list of nav links passed in`, () => {
+    render(<Header {...headerMockProps} />)
+    const { container } = render(<Header {...headerMockProps} />)
+    expect(container.getElementsByTagName(`a`).length).toEqual(4)
+  })
   it.todo(`on medium breakpoint it displays the burger menu`)
 })

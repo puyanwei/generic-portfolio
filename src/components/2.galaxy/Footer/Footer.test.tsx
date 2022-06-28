@@ -12,8 +12,16 @@ describe(`Footer`, () => {
     render(<Footer {...footerMockProps} />)
     expect(screen.getByTestId(`footer`)).not.toHaveClass(`undefined`)
   })
-  it.todo(`has the menu items on the right and icon on the left`)
-  it.todo(`renders the default styles`)
-  it.todo(`applies the anchor links correctly`)
-  it.todo(`on medium breakpoint it displays the burger menu`)
+  it(`uses the footer tag`, () => {
+    const { container } = render(<Footer {...footerMockProps} />)
+    expect(container.querySelector(`footer`)).toBeVisible()
+  })
+  it(`renders the default styles`, () => {
+    render(<Footer {...footerMockProps} />)
+    expect(screen.getByTestId(`footer`)).toHaveClass(`flex justify-between`)
+  })
+  it(`renders the list of nav links passed in`, () => {
+    const { container } = render(<Footer {...footerMockProps} />)
+    expect(container.getElementsByTagName(`a`).length).toEqual(4)
+  })
 })
