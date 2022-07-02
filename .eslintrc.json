@@ -16,6 +16,7 @@
     "semi": ["error", "never"],
     "import/no-unresolved": 0, // we should re-enable this once we've determined how to ignore module aliases (e.g @/stores/, @/utils/ etc)
     "no-use-before-define": 0,
+    "no-empty-function": 0,
     "react/jsx-props-no-spreading": 0,
     "react-hooks/exhaustive-deps": 0,
     "react/no-unused-prop-types": 0,

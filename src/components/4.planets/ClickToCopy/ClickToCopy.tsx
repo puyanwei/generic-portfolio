@@ -8,9 +8,13 @@ export function ClickToCopy({
   children,
   className = ``,
 }: Props) {
+  function copyToClipboard(textToCopy: string) {
+    navigator.clipboard.writeText(textToCopy)
+  }
+
   function handleClick(event: MouseEvent<HTMLButtonElement>) {
-    navigator.clipboard.writeText(event.currentTarget.textContent as string)
-    event.currentTarget.textContent = `Copied to notepad`
+    copyToClipboard(event.currentTarget.textContent as string)
+    event.currentTarget.textContent = `Copied to clipboard`
   }
   return (
     <button

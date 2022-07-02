@@ -4,13 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "test": "jest --watch",
+    "storybook": "start-storybook -p 6006",
     "start": "next start",
+    "build": "next build",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
-    "test": "jest --watch",
     "test-all": "jest --verbose",
-    "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "dependencies": {
