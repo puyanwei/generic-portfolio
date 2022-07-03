@@ -19,23 +19,21 @@ export function Link({
   isNewTab = false,
   isNoFollow = false,
   isNoReferrer = false,
-  icon: providedIcon,
 }: Props) {
   const follow = isNoFollow ? `nofollow` : ``
   const referrer = isNoReferrer ? `noreferrer` : ``
   const rel = `${follow.trim()} ${referrer.trim()}`
 
   const target = isNewTab ? `_blank` : `_self`
-  const icon = !!providedIcon ? providedIcon : null
   return (
     <NextLink href={href}>
       <a
-        className={`text-gray-400 hover:text-gray-500 flex ${className}`}
+        className={` ${className}`}
         data-testid={testId}
         target={target}
         rel={rel}
       >
-        {children} {icon}
+        {children}
       </a>
     </NextLink>
   )
