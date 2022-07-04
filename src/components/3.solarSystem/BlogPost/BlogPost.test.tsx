@@ -26,6 +26,7 @@ describe(`BlogPost`, () => {
       screen.getByText(`How I am so productive by waking up at 2am`)
     ).toBeVisible()
   })
+
   it(`should add the url link to the blogpost title`, () => {
     render(<BlogPost {...blogPostMockProps} url="/contact-us" />)
     expect(screen.getByTestId(`link`)).toHaveAttribute(`href`, `/contact-us`)

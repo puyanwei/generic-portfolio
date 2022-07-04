@@ -46,7 +46,7 @@
     "quotes": ["error", "backtick"],
     "prettier/prettier": [
       "error",
-      { "endOfLine": "auto", "semi": false },
+      { "endOfLine": "auto", "semi": false, "singleQuote": false },
       {
         "usePrettierrc": false
       }
