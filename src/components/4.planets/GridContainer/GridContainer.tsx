@@ -1,11 +1,12 @@
 import { Component } from "@/types"
 import { nullifyAndWarn } from "../../../utils/helpers"
-import { ColumnCount, GapSize } from "./types"
+import { Alignment, ColumnCount, GapSize } from "./types"
 
 export interface Props extends Component {
   hasMaxWidth?: boolean
   columns?: ColumnCount
   gap?: GapSize
+  alignment?: Alignment
 }
 
 const layout = {
@@ -28,6 +29,11 @@ const layout = {
     medium: `gap-6`,
     large: `gap-8`,
   },
+  alignment: {
+    left: `justify-start`,
+    center: `justify-center`,
+    right: `justify-end`,
+  },
 }
 
 export function GridContainer({
@@ -37,16 +43,18 @@ export function GridContainer({
   hasMaxWidth = true,
   columns: providedColumns = 1,
   gap: providedGap = `medium`,
+  alignment: providedAlignment = `left`,
 }: Props) {
   if (!children) return nullifyAndWarn(`No children found`)
 
   const maxWidth = hasMaxWidth ? `max-w-[1280px]` : `-mx-16`
   const columns = layout.columns[providedColumns]
   const gap = layout.gap[providedGap]
+  const alignment = layout.alignment[providedAlignment]
 
   return (
     <div
-      className={`min-w-[320px] mx-auto grid ${gap} ${columns} ${maxWidth} ${className}`}
+      className={`min-w-[320px] mx-auto grid ${gap} ${columns} ${alignment} ${maxWidth} ${className}`}
       data-testid={testId}
     >
       {children}

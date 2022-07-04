@@ -105,6 +105,14 @@ describe(`GridContainer`, () => {
         <div>CHILDREN</div>
       </GridContainer>
     )
-    expect(screen.getByTestId(`grid-container`)).toHaveClass(` gap-6`)
+    expect(screen.getByTestId(`grid-container`)).toHaveClass(`gap-6`)
+  })
+  it(`sets the alignments of the children`, () => {
+    render(
+      <GridContainer alignment="left">
+        <div>CHILDREN</div>
+      </GridContainer>
+    )
+    expect(screen.getByTestId(`grid-container`)).toHaveClass(`justify-start`)
   })
 })
