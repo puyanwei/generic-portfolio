@@ -30,9 +30,9 @@ const layout = {
     large: `gap-8`,
   },
   alignment: {
-    left: `justify-start`,
-    center: `justify-center`,
-    right: `justify-end`,
+    left: `justify-items-start`,
+    center: `justify-items-center`,
+    right: `justify-items-end`,
   },
 }
 

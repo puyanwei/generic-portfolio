@@ -10,11 +10,11 @@ export function HeroSection({
 }: Props) {
   return (
     <GridContainer className={className} data-testid={testId}>
-      Hi, I'm developer. I make websites and apps with a focus on function,
-      speed and performance
-      <div>
-        <Button>Check out my work</Button>
-      </div>
+      <p className="text-5xl leading-relaxed">
+        Hi, I'm developer. I make <strong>websites and apps</strong> with a
+        focus on function, speed and performance
+      </p>
+      <Button>Check out my work</Button>
     </GridContainer>
   )
 }

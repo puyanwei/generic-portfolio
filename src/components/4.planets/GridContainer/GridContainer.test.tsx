@@ -113,6 +113,8 @@ describe(`GridContainer`, () => {
         <div>CHILDREN</div>
       </GridContainer>
     )
-    expect(screen.getByTestId(`grid-container`)).toHaveClass(`justify-start`)
+    expect(screen.getByTestId(`grid-container`)).toHaveClass(
+      `justify-items-start`
+    )
   })
 })
