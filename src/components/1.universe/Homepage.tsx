@@ -5,6 +5,7 @@ import { BlogFeedSection } from "../2.galaxy/BlogFeedSection"
 import { ContactUsSection } from "../2.galaxy/ContactUsSection"
 import { Footer } from "../2.galaxy/Footer"
 import { Header } from "../2.galaxy/Header"
+import { navLinks } from "../2.galaxy/Header/Header.mockProps"
 import { HeroSection } from "../2.galaxy/HeroSection"
 import { ProjectGallerySection } from "../2.galaxy/ProjectGallerySection"
 import { IconWrapper } from "../5.blackHole/Icons"
@@ -12,28 +13,10 @@ import { IconWrapper } from "../5.blackHole/Icons"
 export interface Props extends Component {}
 
 const icon = <IconWrapper testId="FaLaptop" icon={<FaLaptop size={48} />} />
-const navLinks = [
-  {
-    href: `/projects`,
-    label: `Projects`,
-  },
-  {
-    href: `/about`,
-    label: `About`,
-  },
-  {
-    href: `/posts`,
-    label: `Posts`,
-  },
-  {
-    href: `/contact`,
-    label: `Contact`,
-  },
-]
 
-export function Homepage({ testId = `homepage` }: Props) {
+export function Homepage({ testId = `homepage`, className = `` }: Props) {
   return (
-    <div data-testid={testId}>
+    <div className={className} data-testid={testId}>
       <Header icon={icon} navLinks={navLinks} />
       <HeroSection />
       <ProjectGallerySection />

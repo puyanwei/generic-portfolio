@@ -1,3 +1,4 @@
+import { GridContainer } from "@/components/4.planets/GridContainer"
 import { Link } from "@/components/4.planets/Link"
 import { Component } from "@/types"
 
@@ -18,18 +19,20 @@ export function Footer({
   footerLinks,
 }: Props) {
   return (
-    <footer
-      data-testid={testId}
-      className={`flex justify-between ${className}`}
-    >
-      <span className="flex">{icon}</span>
-      <span className="flex gap-4">
-        {footerLinks.map(({ label, href }) => (
-          <Link key={label} href={href}>
-            {label}
-          </Link>
-        ))}
-      </span>
-    </footer>
+    <GridContainer>
+      <footer
+        data-testid={testId}
+        className={`flex justify-between ${className}`}
+      >
+        <span className="flex">{icon}</span>
+        <span className="flex gap-4">
+          {footerLinks.map(({ label, href }) => (
+            <Link key={label} href={href}>
+              {label}
+            </Link>
+          ))}
+        </span>
+      </footer>
+    </GridContainer>
   )
 }
