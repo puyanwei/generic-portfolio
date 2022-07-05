@@ -53,11 +53,11 @@ export function GridContainer({
   const alignment = layout.alignment[providedAlignment]
 
   return (
-    <div
+    <section
       className={`min-w-[320px] mx-auto grid ${gap} ${columns} ${alignment} ${maxWidth} ${className}`}
       data-testid={testId}
     >
       {children}
-    </div>
+    </section>
   )
 }

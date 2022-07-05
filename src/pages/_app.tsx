@@ -1,13 +1,19 @@
 import "../styles/globals.css"
 import type { AppProps } from "next/app"
-import { ActiveBreakpoint } from "@/components/DevTools/ActiveBreakpoint"
+import { Footer } from "@/components/2.galaxy/Footer"
+import { Header } from "@/components/2.galaxy/Header"
+import { navLinks } from "@/components/2.galaxy/Header/Header.mockProps"
+import { IconWrapper } from "@/components/5.blackHole/Icons"
+import { FaLaptop } from "react-icons/fa"
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const isInDevelopmentMode = process.env.NODE_ENV !== `development`
+  const icon = <IconWrapper testId="FaLaptop" icon={<FaLaptop size={48} />} />
+
   return (
     <>
+      <Header icon={icon} navLinks={navLinks} />
       <Component {...pageProps} />
-      {isInDevelopmentMode && <ActiveBreakpoint />}
+      <Footer icon={icon} footerLinks={navLinks} />
     </>
   )
 }
