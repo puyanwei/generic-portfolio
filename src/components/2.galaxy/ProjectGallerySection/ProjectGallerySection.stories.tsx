@@ -9,5 +9,5 @@ export default {
 } as ComponentMeta<typeof Component>
 
 export const ProjectGallerySection: ComponentStory<typeof Component> = () => (
-  <Component {...projectGallerySectionMockProps}>Text</Component>
+  <Component {...projectGallerySectionMockProps} />
 )

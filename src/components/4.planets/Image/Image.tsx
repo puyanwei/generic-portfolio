@@ -13,16 +13,19 @@ export function Image({
   src,
   alt,
   layout = `fill`,
+  objectFit = `contain`,
   ...props
 }: Props) {
   return (
-    <NextImage
-      className={className}
-      src={src}
-      layout={layout}
-      alt={alt}
-      data-testid={testId}
-      {...props}
-    />
+    <span className={`relative inline-block h-[384px] w-[668px] ${className}`}>
+      <NextImage
+        src={src}
+        layout={layout}
+        objectFit={objectFit}
+        alt={alt}
+        data-testid={testId}
+        {...props}
+      />
+    </span>
   )
 }
