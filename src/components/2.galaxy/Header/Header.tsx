@@ -20,9 +20,12 @@ export function Header({
 }: Props) {
   return (
     <GridContainer>
-      <nav data-testid={testId} className={`flex justify-between ${className}`}>
+      <nav
+        data-testid={testId}
+        className={`flex justify-between w-full ${className}`}
+      >
         <span>{icon}</span>
-        <span className="flex gap-4 items-center">
+        <span className="flex items-center gap-4">
           {navLinks.map(({ label, href }) => (
             <Link key={label} href={href}>
               {label}

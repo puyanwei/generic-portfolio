@@ -12,7 +12,7 @@ export function HeroSection({
   return (
     <GridContainer className={className} data-testid={testId}>
       <Heading size="x-large">
-        Hi, I'm a generic developer. Be impressed as I make
+        Hi, I'm a 2x generic developer. Be impressed as I make
         <strong> websites and apps</strong> and the most typical projects
       </Heading>
       <Button>Check out my work</Button>

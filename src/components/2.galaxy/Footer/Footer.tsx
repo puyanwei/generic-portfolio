@@ -22,7 +22,7 @@ export function Footer({
     <GridContainer>
       <footer
         data-testid={testId}
-        className={`flex justify-between ${className}`}
+        className={`flex justify-between w-full ${className}`}
       >
         <span className="flex">{icon}</span>
         <span className="flex gap-4">

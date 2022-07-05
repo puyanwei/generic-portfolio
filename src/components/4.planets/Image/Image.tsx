@@ -12,20 +12,19 @@ export function Image({
   className = ``,
   src,
   alt,
-  layout = `fill`,
-  objectFit = `contain`,
+  layout = `raw`,
   ...props
 }: Props) {
   return (
-    <span className={`relative inline-block h-[384px] w-[668px] ${className}`}>
-      <NextImage
-        src={src}
-        layout={layout}
-        objectFit={objectFit}
-        alt={alt}
-        data-testid={testId}
-        {...props}
-      />
-    </span>
+    <NextImage
+      className={`object-cover ${className}`}
+      src={src}
+      alt={alt}
+      data-testid={testId}
+      width="668px"
+      height="384px"
+      layout={layout}
+      {...props}
+    />
   )
 }

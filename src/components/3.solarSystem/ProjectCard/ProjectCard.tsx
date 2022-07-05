@@ -15,13 +15,10 @@ export function ProjectCard({
   caption,
 }: Props) {
   return (
-    <div data-testid={testId}>
-      <Image
-        className="w-full aspect-video"
-        objectFit="cover"
-        src={src}
-        alt={alt}
-      />
+    <div className={className} data-testid={testId}>
+      <div className="w-full overflow-hidden aspect-video">
+        <Image className="w-full" src={src} alt={alt} />
+      </div>
       <p className="my-4">{caption}</p>
     </div>
   )
