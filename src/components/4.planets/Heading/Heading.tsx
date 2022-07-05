@@ -29,7 +29,10 @@ export function Heading({
   const size = variants.size[providedSize]
 
   return (
-    <Tag className={`${size} ${className}`} data-testid={testId}>
+    <Tag
+      className={`leading-relaxed text-gray-600 ${size} ${className}`}
+      data-testid={testId}
+    >
       {children}
     </Tag>
   )

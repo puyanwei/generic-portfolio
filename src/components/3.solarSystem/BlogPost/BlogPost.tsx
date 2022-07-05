@@ -19,9 +19,7 @@ export function BlogPost({
     <div className={className} data-testid={testId}>
       <p className="text-gray-400">{date}</p>
       <Link href={url}>
-        <Heading className="text-gray-600" size="small">
-          {title}
-        </Heading>
+        <Heading size="small">{title}</Heading>
       </Link>
     </div>
   )

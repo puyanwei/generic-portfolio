@@ -11,7 +11,7 @@ export function HeroSection({
 }: Props) {
   return (
     <GridContainer className={className} data-testid={testId}>
-      <Heading size="x-large" className="leading-relaxed text-gray-600">
+      <Heading size="x-large">
         Hi, I'm a generic developer. Be impressed as I make
         <strong> websites and apps</strong> and the most typical projects
       </Heading>
