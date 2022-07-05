@@ -11,8 +11,9 @@ export function HeroSection({
   return (
     <GridContainer className={className} data-testid={testId}>
       <p className="text-5xl leading-relaxed">
-        Hi, I'm developer. I make <strong>websites and apps</strong> with a
-        focus on function, speed and performance
+        Hi, I'm a generic developer. Be impressed as I make
+        <strong> websites and apps</strong> with a focus on function, speed and
+        performance
       </p>
       <Button>Check out my work</Button>
     </GridContainer>
