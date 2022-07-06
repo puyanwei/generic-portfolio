@@ -9,10 +9,14 @@ describe(`BlogFeedSection`, () => {
   })
 
   it(`renders the children correctly`, () => {
-    render(<BlogFeedSection {...blogFeedSectionMockProps}>Hello world</BlogFeedSection>)
+    render(
+      <BlogFeedSection {...blogFeedSectionMockProps}>
+        Hello world
+      </BlogFeedSection>
+    )
     expect(screen.getByText(`Hello world`)).toBeVisible()
   })
-  
+
   it(`className default prop should be blank string`, () => {
     render(<BlogFeedSection {...blogFeedSectionMockProps} />)
     expect(screen.getByTestId(`blog-feed-section`)).not.toHaveClass(`undefined`)

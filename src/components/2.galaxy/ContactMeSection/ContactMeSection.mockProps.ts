@@ -1,5 +1,3 @@
 import type { Props } from "./ContactMeSection"
 
-export const contactMeSectionMockProps: Props = {
-    
-}
+export const contactMeSectionMockProps: Props = {}

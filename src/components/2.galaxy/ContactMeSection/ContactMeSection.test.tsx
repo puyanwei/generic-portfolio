@@ -9,12 +9,18 @@ describe(`ContactMeSection`, () => {
   })
 
   it(`renders the children correctly`, () => {
-    render(<ContactMeSection {...contactMeSectionMockProps}>Hello world</ContactMeSection>)
+    render(
+      <ContactMeSection {...contactMeSectionMockProps}>
+        Hello world
+      </ContactMeSection>
+    )
     expect(screen.getByText(`Hello world`)).toBeVisible()
   })
-  
+
   it(`className default prop should be blank string`, () => {
     render(<ContactMeSection {...contactMeSectionMockProps} />)
-    expect(screen.getByTestId(`contact-me-section`)).not.toHaveClass(`undefined`)
+    expect(screen.getByTestId(`contact-me-section`)).not.toHaveClass(
+      `undefined`
+    )
   })
 })

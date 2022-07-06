@@ -1,5 +1,3 @@
 import type { Props } from "./ProjectGallerySection"
 
-export const projectGallerySectionMockProps: Props = {
-    
-}
+export const projectGallerySectionMockProps: Props = {}

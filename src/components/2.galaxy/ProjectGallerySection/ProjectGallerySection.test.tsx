@@ -9,12 +9,18 @@ describe(`ProjectGallerySection`, () => {
   })
 
   it(`renders the children correctly`, () => {
-    render(<ProjectGallerySection {...projectGallerySectionMockProps}>Hello world</ProjectGallerySection>)
+    render(
+      <ProjectGallerySection {...projectGallerySectionMockProps}>
+        Hello world
+      </ProjectGallerySection>
+    )
     expect(screen.getByText(`Hello world`)).toBeVisible()
   })
-  
+
   it(`className default prop should be blank string`, () => {
     render(<ProjectGallerySection {...projectGallerySectionMockProps} />)
-    expect(screen.getByTestId(`project-gallery-section`)).not.toHaveClass(`undefined`)
+    expect(screen.getByTestId(`project-gallery-section`)).not.toHaveClass(
+      `undefined`
+    )
   })
 })

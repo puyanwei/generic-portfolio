@@ -12,7 +12,7 @@ describe(`ProjectCard`, () => {
     render(<ProjectCard {...projectCardMockProps}>Hello world</ProjectCard>)
     expect(screen.getByText(`Hello world`)).toBeVisible()
   })
-  
+
   it(`className default prop should be blank string`, () => {
     render(<ProjectCard {...projectCardMockProps} />)
     expect(screen.getByTestId(`project-card`)).not.toHaveClass(`undefined`)

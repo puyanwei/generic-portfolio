@@ -9,10 +9,12 @@ describe(`AboutMeSection`, () => {
   })
 
   it(`renders the children correctly`, () => {
-    render(<AboutMeSection {...aboutMeSectionMockProps}>Hello world</AboutMeSection>)
+    render(
+      <AboutMeSection {...aboutMeSectionMockProps}>Hello world</AboutMeSection>
+    )
     expect(screen.getByText(`Hello world`)).toBeVisible()
   })
-  
+
   it(`className default prop should be blank string`, () => {
     render(<AboutMeSection {...aboutMeSectionMockProps} />)
     expect(screen.getByTestId(`about-me-section`)).not.toHaveClass(`undefined`)

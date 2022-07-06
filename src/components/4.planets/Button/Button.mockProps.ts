@@ -1,5 +1,3 @@
 import type { Props } from "./Button"
 
-export const buttonMockProps: Props = {
-    
-}
+export const buttonMockProps: Props = {}
