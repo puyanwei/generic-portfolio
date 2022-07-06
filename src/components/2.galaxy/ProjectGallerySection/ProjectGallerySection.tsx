@@ -1,5 +1,6 @@
 import { ProjectCard } from "@/components/3.solarSystem/ProjectCard"
 import { GridContainer } from "@/components/4.planets/GridContainer"
+import { Heading } from "@/components/4.planets/Heading"
 import { Component } from "@/types"
 
 export interface Props extends Component {}
@@ -16,6 +17,9 @@ export function ProjectGallerySection({
       columns={2}
       gap="small"
     >
+      <Heading className="col-start-1 col-end-3 my-8" size="x-large">
+        My excellent <strong>projects</strong>
+      </Heading>
       <ProjectCard
         src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8"
         alt="To do app"

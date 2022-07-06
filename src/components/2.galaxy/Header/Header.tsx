@@ -1,5 +1,4 @@
 import { GridContainer } from "@/components/4.planets/GridContainer"
-import { Link } from "@/components/4.planets/Link"
 import { Component } from "@/types"
 
 export interface Props extends Component {
@@ -22,16 +21,18 @@ export function Header({
     <GridContainer>
       <nav
         data-testid={testId}
-        className={`flex justify-between w-full ${className}`}
+        className={` w-full fixed z-10 top-0 left-0 bg-white shadow pb-2 ${className}`}
       >
-        <span>{icon}</span>
-        <span className="flex items-center gap-4">
-          {navLinks.map(({ label, href }) => (
-            <a key={label} href={href}>
-              {label}
-            </a>
-          ))}
-        </span>
+        <div className="max-w-[1280px] flex mx-auto justify-between w-full">
+          <span className="pt-2">{icon}</span>
+          <span className="flex items-center gap-4 pt-2">
+            {navLinks.map(({ label, href }) => (
+              <a className="hover:underline" key={label} href={href}>
+                {label}
+              </a>
+            ))}
+          </span>
+        </div>
       </nav>
     </GridContainer>
   )

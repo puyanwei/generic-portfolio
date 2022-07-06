@@ -21,8 +21,8 @@ export function Image({
       src={src}
       alt={alt}
       data-testid={testId}
-      width="668px"
-      height="384px"
+      width="664px"
+      height="380px"
       layout={layout}
       {...props}
     />

@@ -55,7 +55,7 @@ export function GridContainer({
 
   return (
     <section
-      className={`min-w-[320px] mx-auto grid my-8 ${gap} ${columns} ${alignment} ${maxWidth} ${className}`}
+      className={`min-w-[320px] mx-auto grid my-16 ${gap} ${columns} ${alignment} ${maxWidth} ${className}`}
       data-testid={testId}
       id={id}
     >

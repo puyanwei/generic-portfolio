@@ -15,7 +15,7 @@ export default function Document() {
           rel="stylesheet"
         />
       </Head>
-      <html className="scroll-smooth">
+      <html className="scroll-smooth scroll-pt-16">
         <body>
           <Main />
           <NextScript />

@@ -19,15 +19,15 @@ export function Footer({
   footerLinks,
 }: Props) {
   return (
-    <GridContainer>
+    <GridContainer className="mb-4">
       <footer
         data-testid={testId}
         className={`flex justify-between w-full ${className}`}
       >
         <span className="flex">{icon}</span>
-        <span className="flex gap-4">
+        <span className="flex items-end gap-4">
           {footerLinks.map(({ label, href }) => (
-            <Link key={label} href={href}>
+            <Link className="hover:underline" key={label} href={href}>
               {label}
             </Link>
           ))}

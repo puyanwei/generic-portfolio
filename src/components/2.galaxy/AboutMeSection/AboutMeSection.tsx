@@ -9,8 +9,8 @@ export function AboutMeSection({
   className = ``,
 }: Props) {
   return (
-    <article className="py-8 bg-gray-100">
-      <GridContainer className={className} data-testid={testId} id={testId}>
+    <article className="py-8 bg-gray-100" id={testId}>
+      <GridContainer className={className} data-testid={testId}>
         <Heading size="x-large">
           A little <strong>about</strong> me
         </Heading>
