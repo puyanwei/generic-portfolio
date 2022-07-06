@@ -3,6 +3,7 @@ import { GridContainer } from "@/components/4.planets/GridContainer"
 import { Heading } from "@/components/4.planets/Heading"
 import { Link } from "@/components/4.planets/Link"
 import { Component } from "@/types"
+import { projectGalleryData } from "./ProjectGallerySection.mockProps"
 
 export interface Props extends Component {}
 
@@ -12,37 +13,20 @@ export function ProjectGallerySection({
 }: Props) {
   return (
     <GridContainer
-      className={className}
+      className={`grid-cols-1 md:grid-cols-2 ${className}`}
       data-testid={testId}
       id={testId}
-      columns={2}
       gap="small"
     >
-      <Heading className="col-start-1 col-end-3 my-8" size="x-large">
+      <Heading className="my-8 md:col-start-1 md:col-end-3" size="x-large">
         My excellent <strong>projects</strong>
       </Heading>
-      <ProjectCard
-        src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8"
-        alt="To do app"
-        caption="My amazing to do app"
-      />
-      <ProjectCard
-        src="https://images.unsplash.com/photo-1534794048419-48e110dca88e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8"
-        alt="Weather app"
-        caption="My stunning weather app"
-      />
-      <ProjectCard
-        src="https://images.unsplash.com/photo-1612010167108-3e6b327405f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8"
-        alt="Stock app"
-        caption="An incredible stocks tracker"
-      />
-      <ProjectCard
-        src="https://images.unsplash.com/photo-1592329347810-258afdd206bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8"
-        alt="Instagram clone"
-        caption="The best instagram clone"
-      />
+      {projectGalleryData.map(({ src, alt, caption }) => (
+        <ProjectCard src={src} alt={alt} caption={caption} key={alt} />
+      ))}
+
       <Link
-        className="col-start-2 text-gray-600 justify-self-end"
+        className="text-gray-600 justify-self-end md:col-start-2"
         href="https://bit.ly/3OTP6Jp"
         hasIcon
       >

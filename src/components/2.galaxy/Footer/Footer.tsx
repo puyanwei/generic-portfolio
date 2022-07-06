@@ -25,7 +25,7 @@ export function Footer({
         className={`flex justify-between w-full ${className}`}
       >
         <span className="flex">{icon}</span>
-        <span className="flex items-end gap-4">
+        <span className="flex items-end gap-6">
           {footerLinks.map(({ label, href }) => (
             <Link className="hover:underline" key={label} href={href}>
               {label}

@@ -29,7 +29,7 @@ export function Link({
   return (
     <NextLink href={href}>
       <a
-        className={`flex ${className}`}
+        className={`flex hover:underline ${className}`}
         data-testid={testId}
         target={target}
         rel={rel}

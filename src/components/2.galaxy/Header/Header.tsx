@@ -21,11 +21,11 @@ export function Header({
     <GridContainer>
       <nav
         data-testid={testId}
-        className={` w-full fixed z-10 top-0 left-0 bg-white shadow pb-2 ${className}`}
+        className={` w-full fixed z-10 top-0 left-0 bg-white shadow-md pb-2 ${className}`}
       >
         <div className="max-w-[1280px] flex mx-auto justify-between w-full">
           <span className="pt-2">{icon}</span>
-          <span className="flex items-center gap-4 pt-2">
+          <span className="flex items-center gap-6 pt-2">
             {navLinks.map(({ label, href }) => (
               <a className="hover:underline" key={label} href={href}>
                 {label}

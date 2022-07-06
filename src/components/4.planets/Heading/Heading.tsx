@@ -6,20 +6,22 @@ const variants = {
     white: `text-white`,
   },
   size: {
-    small: `text-2xl`,
-    medium: `text-3xl`,
-    large: `text-4xl`,
-    "x-large": `text-5xl`,
+    small: `text-xl md:text-2xl`,
+    medium: `text-2xl md:text-3xl`,
+    large: `text-3xl md:text-4xl`,
+    "x-large": `text-4xl md:text-5xl`,
+    reset: ``,
   },
   tag: {
     small: `h3`,
     medium: `h2`,
     large: `h1`,
     "x-large": `h1`,
+    reset: `h1`,
   },
 }
 export interface Props extends Component {
-  size?: `small` | `medium` | `large` | `x-large`
+  size?: `small` | `medium` | `large` | `x-large` | `reset`
   theme?: `default` | `white`
 }
 

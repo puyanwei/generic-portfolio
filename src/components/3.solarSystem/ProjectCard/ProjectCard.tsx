@@ -16,7 +16,7 @@ export function ProjectCard({
 }: Props) {
   return (
     <div className={className} data-testid={testId}>
-      <div className="w-full overflow-hidden aspect-video">
+      <div className="flex w-full overflow-hidden aspect-video">
         <Image className="w-full" src={src} alt={alt} />
       </div>
       <p className="my-4">{caption}</p>
