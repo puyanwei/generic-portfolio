@@ -2,7 +2,7 @@ import { Component } from "@/types"
 
 export interface Props extends Component {
   type?: `buton` | `submit` | `reset`
-  onClick?: () => void
+  onClick?: string | (() => void)
 }
 
 export function Button({

@@ -16,5 +16,11 @@ export const Link: ComponentStory<typeof Component> = () => (
       <StorybookHeading>Default link</StorybookHeading>
       <Component {...linkMockProps}>view more</Component>
     </div>
+    <div>
+      <StorybookHeading>Default link</StorybookHeading>
+      <Component {...linkMockProps} hasIcon>
+        view more
+      </Component>
+    </div>
   </StorybookContainer>
 )

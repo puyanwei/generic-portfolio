@@ -1,6 +1,7 @@
 import { ProjectCard } from "@/components/3.solarSystem/ProjectCard"
 import { GridContainer } from "@/components/4.planets/GridContainer"
 import { Heading } from "@/components/4.planets/Heading"
+import { Link } from "@/components/4.planets/Link"
 import { Component } from "@/types"
 
 export interface Props extends Component {}
@@ -40,6 +41,13 @@ export function ProjectGallerySection({
         alt="Instagram clone"
         caption="The best instagram clone"
       />
+      <Link
+        className="col-start-2 text-gray-600 justify-self-end"
+        href="https://bit.ly/3OTP6Jp"
+        hasIcon
+      >
+        view more
+      </Link>
     </GridContainer>
   )
 }

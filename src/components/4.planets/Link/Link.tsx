@@ -8,7 +8,7 @@ export interface Props extends Component {
   isNewTab?: boolean
   isNoFollow?: boolean
   isNoReferrer?: boolean
-  icon?: JSX.Element
+  hasIcon?: boolean
 }
 
 export function Link({
@@ -19,6 +19,7 @@ export function Link({
   isNewTab = false,
   isNoFollow = false,
   isNoReferrer = false,
+  hasIcon = false,
 }: Props) {
   const follow = isNoFollow ? `nofollow` : ``
   const referrer = isNoReferrer ? `noreferrer` : ``
@@ -28,12 +29,13 @@ export function Link({
   return (
     <NextLink href={href}>
       <a
-        className={` ${className}`}
+        className={`flex ${className}`}
         data-testid={testId}
         target={target}
         rel={rel}
       >
         {children}
+        {hasIcon && <IconWrapper icon={<BsArrowRight />} />}
       </a>
     </NextLink>
   )

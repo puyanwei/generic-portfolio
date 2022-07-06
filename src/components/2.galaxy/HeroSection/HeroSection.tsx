@@ -15,7 +15,9 @@ export function HeroSection({
         Hi, I'm a 2x generic developer. Be impressed as I make
         <strong> websites and apps</strong> and the most typical projects
       </Heading>
-      <Button>Check out my work</Button>
+      <a href="https://bit.ly/3P9SQGw">
+        <Button>Check out my work</Button>
+      </a>
     </GridContainer>
   )
 }
