@@ -11,7 +11,7 @@ export function ContactMeSection({
 }: Props) {
   return (
     <div className="py-8 bg-gray-600">
-      <GridContainer className={className} data-testid={testId}>
+      <GridContainer className={className} data-testid={testId} id={testId}>
         <Heading theme="white" size="small">
           Get in <strong>contact</strong>
         </Heading>

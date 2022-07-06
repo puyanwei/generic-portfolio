@@ -9,17 +9,17 @@ export function AboutMeSection({
   className = ``,
 }: Props) {
   return (
-    <div className="bg-gray-100 py-8">
-      <GridContainer className={className} data-testid={testId}>
+    <article className="py-8 bg-gray-100">
+      <GridContainer className={className} data-testid={testId} id={testId}>
         <Heading size="x-large">
           A little <strong>about</strong> me
         </Heading>
-        <p className="text-gray-600 text-3xl leading-relaxed">
+        <p className="text-3xl leading-relaxed text-gray-600">
           I graduated with a computer science degree. I’m passionate about my
           unrealistic dream of having a terrible idea and creating a startup
           from it with no people skills or business experience
         </p>
       </GridContainer>
-    </div>
+    </article>
   )
 }

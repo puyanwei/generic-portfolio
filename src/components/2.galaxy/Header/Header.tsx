@@ -27,9 +27,9 @@ export function Header({
         <span>{icon}</span>
         <span className="flex items-center gap-4">
           {navLinks.map(({ label, href }) => (
-            <Link key={label} href={href}>
+            <a key={label} href={href}>
               {label}
-            </Link>
+            </a>
           ))}
         </span>
       </nav>

@@ -13,7 +13,7 @@ export function BlogFeedSection({
   className = ``,
 }: Props) {
   return (
-    <GridContainer className={className} data-testid={testId}>
+    <GridContainer className={className} data-testid={testId} id={testId}>
       <Heading size="x-large">
         Latest <strong>posts</strong>
       </Heading>

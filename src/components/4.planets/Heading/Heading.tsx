@@ -1,10 +1,5 @@
 import { Component } from "@/types"
 
-export interface Props extends Component {
-  size?: `small` | `medium` | `large` | `x-large`
-  theme: `default` | `white`
-}
-
 const variants = {
   theme: {
     default: `text-gray-600`,
@@ -22,6 +17,10 @@ const variants = {
     large: `h1`,
     "x-large": `h1`,
   },
+}
+export interface Props extends Component {
+  size?: `small` | `medium` | `large` | `x-large`
+  theme?: `default` | `white`
 }
 
 export function Heading({

@@ -10,7 +10,7 @@ export function HeroSection({
   className = ``,
 }: Props) {
   return (
-    <GridContainer className={className} data-testid={testId}>
+    <GridContainer className={className} data-testid={testId} id={testId}>
       <Heading size="x-large">
         Hi, I'm a 2x generic developer. Be impressed as I make
         <strong> websites and apps</strong> and the most typical projects

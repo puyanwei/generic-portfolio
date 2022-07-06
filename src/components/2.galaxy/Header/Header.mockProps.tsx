@@ -6,19 +6,19 @@ const icon = <IconWrapper testId="FaLaptop" icon={<FaLaptop size={48} />} />
 
 export const navLinks = [
   {
-    href: `/projects`,
+    href: `#project-gallery-section`,
     label: `Projects`,
   },
   {
-    href: `/about`,
+    href: `#about-me-section`,
     label: `About`,
   },
   {
-    href: `/posts`,
+    href: `#blog-feed-section`,
     label: `Posts`,
   },
   {
-    href: `/contact`,
+    href: `#contact-me-section`,
     label: `Contact`,
   },
 ]

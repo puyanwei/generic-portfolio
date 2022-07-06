@@ -2,13 +2,6 @@ import { Component } from "@/types"
 import { nullifyAndWarn } from "../../../utils/helpers"
 import { Alignment, ColumnCount, GapSize } from "./types"
 
-export interface Props extends Component {
-  hasMaxWidth?: boolean
-  columns?: ColumnCount
-  gap?: GapSize
-  alignment?: Alignment
-}
-
 const layout = {
   columns: {
     1: `grid-cols-1`,
@@ -35,6 +28,13 @@ const layout = {
     right: `justify-items-end`,
   },
 }
+export interface Props extends Component {
+  hasMaxWidth?: boolean
+  columns?: ColumnCount
+  gap?: GapSize
+  alignment?: Alignment
+  id?: string
+}
 
 export function GridContainer({
   testId = `grid-container`,
@@ -44,6 +44,7 @@ export function GridContainer({
   columns: providedColumns = 1,
   gap: providedGap = `medium`,
   alignment: providedAlignment = `left`,
+  id,
 }: Props) {
   if (!children) return nullifyAndWarn(`No children found`)
 
@@ -56,6 +57,7 @@ export function GridContainer({
     <section
       className={`min-w-[320px] mx-auto grid my-8 ${gap} ${columns} ${alignment} ${maxWidth} ${className}`}
       data-testid={testId}
+      id={id}
     >
       {children}
     </section>

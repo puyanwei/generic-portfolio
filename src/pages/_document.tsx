@@ -15,10 +15,12 @@ export default function Document() {
           rel="stylesheet"
         />
       </Head>
-      <body>
-        <Main />
-        <NextScript />
-      </body>
+      <html className="scroll-smooth">
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </html>
     </Html>
   )
 }

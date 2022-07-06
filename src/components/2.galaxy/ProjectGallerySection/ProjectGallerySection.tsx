@@ -12,6 +12,7 @@ export function ProjectGallerySection({
     <GridContainer
       className={className}
       data-testid={testId}
+      id={testId}
       columns={2}
       gap="small"
     >
