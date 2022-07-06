@@ -6,12 +6,12 @@ import { ProjectGallerySection } from "../2.galaxy/ProjectGallerySection"
 
 export function Homepage() {
   return (
-    <>
+    <div data-testid="homepage">
       <HeroSection />
       <ProjectGallerySection />
       <AboutMeSection />
       <BlogFeedSection />
       <ContactMeSection />
-    </>
+    </div>
   )
 }

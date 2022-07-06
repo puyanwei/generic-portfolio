@@ -8,11 +8,6 @@ describe(`HeroSection`, () => {
     expect(screen.getByTestId(`hero-section`)).toBeVisible()
   })
 
-  it(`renders the children correctly`, () => {
-    render(<HeroSection {...heroSectionMockProps}>Hello world</HeroSection>)
-    expect(screen.getByText(`Hello world`)).toBeVisible()
-  })
-
   it(`className default prop should be blank string`, () => {
     render(<HeroSection {...heroSectionMockProps} />)
     expect(screen.getByTestId(`hero-section`)).not.toHaveClass(`undefined`)

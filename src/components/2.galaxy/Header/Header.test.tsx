@@ -20,7 +20,9 @@ describe(`Header`, () => {
 
   it(`renders the default styles`, () => {
     render(<Header {...headerMockProps} />)
-    expect(screen.getByTestId(`header`)).toHaveClass(`flex justify-between`)
+    expect(screen.getByTestId(`header`)).toHaveClass(
+      `w-full fixed z-10 top-0 left-0 bg-white shadow-md pb-2`
+    )
   })
 
   it(`renders the list of nav links passed in`, () => {

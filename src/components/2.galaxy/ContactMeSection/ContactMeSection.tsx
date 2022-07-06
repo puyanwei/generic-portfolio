@@ -10,11 +10,12 @@ export function ContactMeSection({
   className = ``,
 }: Props) {
   return (
-    <article className="py-8 -mx-4 bg-gray-600" id={testId}>
-      <GridContainer
-        className={`p-4 xxl:p-0 ${className}`}
-        data-testid={testId}
-      >
+    <article
+      className="py-8 -mx-4 bg-gray-600"
+      data-testid={testId}
+      id={testId}
+    >
+      <GridContainer className={`p-4 xxl:p-0 ${className}`}>
         <Heading theme="white" size="small">
           Get in <strong>contact</strong>
         </Heading>

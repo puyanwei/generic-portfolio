@@ -42,7 +42,7 @@ describe(`Heading`, () => {
         Hello world
       </Heading>
     )
-    expect(screen.getByTestId(`heading`)).toHaveClass(`text-4xl`)
+    expect(screen.getByTestId(`heading`)).toHaveClass(`text-4xl md:text-5xl`)
     expect(container.querySelector(`h1`)).toBeInTheDocument()
   })
   it(`is extra large font size and h1`, () => {

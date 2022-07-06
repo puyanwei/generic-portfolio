@@ -27,7 +27,7 @@ export function ViewMore({
       isNewTab={isNewTab}
       isNoFollow={isNoFollow}
       isNoReferrer={isNoReferrer}
-      data-testid={testId}
+      testId={testId}
     >
       View more {icon}
     </Link>
