@@ -19,7 +19,7 @@ export const parameters = {
           `Project Gallery Section`,
           `About Me Section`,
           `Blog Feed Section`,
-          `Contact Us Section`,
+          `Contact Me Section`,
           `Footer`,
         ],
         `Solar System`,

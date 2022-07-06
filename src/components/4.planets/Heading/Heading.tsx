@@ -2,9 +2,14 @@ import { Component } from "@/types"
 
 export interface Props extends Component {
   size?: `small` | `medium` | `large` | `x-large`
+  theme: `default` | `white`
 }
 
 const variants = {
+  theme: {
+    default: `text-gray-600`,
+    white: `text-white`,
+  },
   size: {
     small: `text-2xl`,
     medium: `text-3xl`,
@@ -24,13 +29,15 @@ export function Heading({
   className = ``,
   children,
   size: providedSize = `medium`,
+  theme: providedTheme = `default`,
 }: Props) {
   const Tag = variants.tag[providedSize] as keyof JSX.IntrinsicElements
   const size = variants.size[providedSize]
+  const theme = variants.theme[providedTheme]
 
   return (
     <Tag
-      className={`leading-relaxed text-gray-600 ${size} ${className}`}
+      className={`leading-relaxed ${theme} ${size} ${className}`}
       data-testid={testId}
     >
       {children}

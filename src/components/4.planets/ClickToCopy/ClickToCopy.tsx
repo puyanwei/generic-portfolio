@@ -14,7 +14,7 @@ export function ClickToCopy({
 
   function handleClick(event: MouseEvent<HTMLButtonElement>) {
     copyToClipboard(event.currentTarget.textContent as string)
-    event.currentTarget.textContent = `Copied to clipboard`
+    event.currentTarget.textContent = `Copied to clipboard! I'm so desperate please hire me!! :)`
   }
   return (
     <button
