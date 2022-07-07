@@ -11,7 +11,7 @@
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "test-all": "jest --verbose",
-    "build-storybook": "build-storybook"
+    "build-storybook": "next build && build-storybook"
   },
   "dependencies": {
     "@testing-library/user-event": "^14.2.1",
