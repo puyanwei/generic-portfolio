@@ -5,7 +5,6 @@ import { Header } from "@/components/2.galaxy/Header"
 import { navLinks } from "@/components/2.galaxy/Header/Header.mockProps"
 import { IconWrapper } from "@/components/5.blackHole/Icons"
 import { FaLaptop } from "react-icons/fa"
-import { ActiveBreakpoint } from "@/components/DevTools/ActiveBreakpoint"
 
 function MyApp({ Component, pageProps }: AppProps) {
   const icon = (
@@ -20,7 +19,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Header icon={icon} navLinks={navLinks} />
       <Component {...pageProps} />
       <Footer icon={icon} footerLinks={navLinks} />
-      <ActiveBreakpoint />
     </div>
   )
 }
