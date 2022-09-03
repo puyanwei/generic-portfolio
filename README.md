@@ -1,7 +1,8 @@
 # Generic Template Website
 
-Website - https://generic-portfolio-nu.vercel.app/
-Storybook - https://generic-portfolio-storybook.vercel.app/
+| Website | https://generic-portfolio-nu.vercel.app |
+| :--- | :--- |
+| Storybook | https://generic-portfolio-storybook.vercel.app | 
 
 This is a joke portfolio website built with the possibility of using it as a template for other projects. It was also a way to experience a formalised standard of web development, where pieces of the website are built in isolation and then combined together to form the final product.
 
